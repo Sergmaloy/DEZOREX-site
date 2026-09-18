@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="О санитарной службе «DEZOREX»">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://code.jivo.ru https://*.jivosite.com https://*.jivo.ru; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://yandex.ru https://*.jivosite.com https://*.jivo.ru; connect-src 'self' https://formsubmit.co https://*.jivosite.com https://*.jivo.ru wss://*.jivosite.com wss://*.jivo.ru; form-action 'self' https:; base-uri 'self'; object-src 'none'">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="index, follow">
+  <title>О санитарной службе «DEZOREX»</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <!-- ============================================= -->
+  <!-- ЧАТ JIVOSITE                                    -->
+  <!-- Вставьте сюда ваш код из кабинета jivo.ru       -->
+  <!-- (замените строку ниже на код, который выдал Jivo)-->
+  <!-- Пример: <script src="//code.jivo.ru/widget/ВАШ_КОД"></script> -->
+  <!-- <script src="//code.jivo.ru/widget/ВАШ_КОД"></script> -->
+  <!-- ============================================= -->
+</head>
+<body>
+<!-- ===== TOPBAR ===== -->
+<!-- ===== TOPBAR ===== -->
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a href="index.html" class="logo" aria-label="DEZOREX">
+      <span class="logo__img"><img src="img/logo-original.png" alt="DEZOREX"></span>
+      <span class="logo__txt"><b>DEZOREX</b><span>САНИТАРНАЯ СЛУЖБА</span></span></span>
+    </a>
+
+    <div class="topbar__contacts">
+      <a href="tel:+79166928282">+7 916 692-82-82</a>
+      <a href="mailto:dezorex.2024@yandex.ru" class="muted">dezorex.2024@yandex.ru</a>
+    </div>
+    <div class="topbar__schedule">
+      <b>СЭС Москвы</b>
+      Пн–Вс 9–18
+    </div>
+
+    <div class="topbar__cta">
+      <button class="btn btn--yellow" data-open-modal>Узнать цену</button>
+      <button class="btn btn--yellow" data-open-modal>Позвоните мне</button>
+    </div>
+
+    <div class="topbar__social">
+      <a href="https://wa.me/qr/LQVELE6DKAGUD1" target="_blank" rel="noopener noreferrer" class="soc" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-2.8.8.7-2.8-.2-.3A8 8 0 1112 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.7.9-.1.1-.3.2-.5.1-1.4-.7-2.3-1.2-3.2-2.7-.2-.4.2-.4.6-1.2 0-.1 0-.3 0-.4 0-.1-.5-1.3-.7-1.7-.2-.5-.4-.4-.5-.4h-.5c-.1 0-.4.1-.6.3-.2.2-.8.8-.8 1.9 0 1.2.8 2.3.9 2.4.1.1 1.7 2.7 4.2 3.7 1.6.7 2.2.7 3 .6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1z"/></svg></a>
+      <a href="https://max.ru/id027421102123_bot" target="_blank" rel="noopener noreferrer" class="soc" aria-label="Max"><img src="img/icons/max-icon.png" alt="MAX" style="width:22px;height:22px;border-radius:6px;object-fit:cover"></a>
+      <a href="mailto:dezorex.2024@yandex.ru" class="soc" aria-label="Почта"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+    </div>
+    <button class="cart-btn" id="cartBtn" aria-label="Корзина" title="Корзина">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+      <span class="cart-btn__count" id="cartCount">0</span>
+    </button>
+    <div class="topbar__city">Москва ↓</div>
+
+    <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ===== MAIN NAV ===== -->
+<nav class="mainnav">
+  <div class="container mainnav__inner">
+    <a href="index.html" class="mainnav__home" aria-label="Главная">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
+    </a>
+    <ul class="menu" id="menu">
+      <li class="menu__item">
+        <a href="uslugi.html" class="menu__link" data-nav="uslugi">Услуги <svg class="caret" viewBox="0 0 12 12" fill="currentColor"><path d="M6 8 1 3h10z"/></svg></a>
+        <div class="menu__drop">
+          <a href="uslugi.html"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg> Дезинсекция</a>
+          <a href="uslugi.html"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg> Дезинфекция</a>
+          <a href="uslugi.html"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg> Дератизация</a>
+          <a href="uslugi.html"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg> Дезодорация</a>
+          <a href="uslugi.html"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg> Обработка участка</a>
+        </div>
+      </li>
+      <li class="menu__item">
+        <a href="katalog.html" class="menu__link" data-nav="katalog">Каталог <svg class="caret" viewBox="0 0 12 12" fill="currentColor"><path d="M6 8 1 3h10z"/></svg></a>
+        <div class="menu__drop">
+          <a href="katalog.html"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg> Вредители</a>
+          <a href="preparaty.html"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg> Препараты</a>
+        </div>
+      </li>
+      <li class="menu__item"><a href="tseny.html" class="menu__link" data-nav="tseny">Цены</a></li>
+      <li class="menu__item"><a href="yur-licam.html" class="menu__link" data-nav="yur">Юр. лицам</a></li>
+      <li class="menu__item"><a href="o-nas.html" class="menu__link is-active" data-nav="onas">О нас</a></li>
+      <li class="menu__item"><a href="licenziya.html" class="menu__link" data-nav="licenziya">Лицензия</a></li>
+      <li class="menu__item"><a href="otzyvy.html" class="menu__link" data-nav="otzyvy">Отзывы</a></li>
+      <li class="menu__item"><a href="kontakty.html" class="menu__link" data-nav="kontakty">Контакты</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+<div class="crumbs container"><a href="index.html">Главная</a> / <span>О нас</span></div>
+
+<section class="section" style="padding-top:20px">
+  <div class="container">
+    <div class="page-title reveal"><h1 class="h-display">О санитарной службе «DEZOREX»</h1></div>
+
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p class="accent">Высокое качество услуг на всех этапах работ!</p>
+        <p>Оказываем услуги по уничтожению насекомых, грызунов, выведению запахов и обработке помещений. Все мероприятия по борьбе с вредителями выполняются с учётом требований СанПиН и по действующей лицензии.</p>
+        <p>Работаем с физическими и юридическими лицами в Москве и области. Используем профессиональное оборудование и сертифицированные препараты, безопасные для людей и домашних животных.</p>
+        <p>Будем рады стать вашим надёжным исполнителем по работе СЭС и проверенным подрядчиком на постоянное санитарное обслуживание.</p>
+      </div>
+      <div class="about-photo reveal">
+        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=70" alt="Специалист DEZOREX">
+        <div class="about-photo__cap">Специалист команды «DEZOREX»</div>
+        <div class="about-photo__exp">Опыт — 8 лет</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark">
+  <div class="container">
+    <h2 class="h-display reveal" style="font-size:clamp(1.6rem,4vw,2.6rem);margin-bottom:16px">«DEZOREX» в цифрах</h2>
+    <div class="stats">
+      <div class="stat reveal"><b>9000+</b><p>успешных выездов мастеров в год для разных задач</p></div>
+      <div class="stat reveal"><b>130+</b><p>видов вредителей и проблем, с которыми справляемся</p></div>
+      <div class="stat reveal"><b>7-12</b><p>лет — средний опыт наших дезинсекторов и дезинфекторов</p></div>
+      <div class="stat reveal"><b>1 день</b><p>выезд мастера в день обращения. Работаем по будням и воскресеньям</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="text-align:center">
+    <h2 class="h-display reveal" style="font-size:clamp(1.5rem,3.5vw,2.3rem);margin-bottom:14px">Есть вопрос?</h2>
+    <p class="reveal" style="color:var(--gray);max-width:560px;margin:0 auto 24px">Ответим без воды и навязывания услуг. Только по сути и конфиденциально!</p>
+    <button class="btn btn--dark btn--lg reveal" data-open-modal>Перезвоните мне</button>
+  </div>
+</section>
+
+</main>
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__cta">
+      <a href="uslugi.html">Дезинсекция</a>
+      <a href="uslugi.html">Дезинфекция</a>
+      <a href="uslugi.html">Дератизация</a>
+      <a href="uslugi.html">Дезодорация</a>
+      <a href="katalog.html">Каталог вредителей</a>
+      <a href="licenziya.html">Лицензия</a>
+    </div>
+
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="logo">
+          <span class="logo__img"><img src="img/logo-original.png" alt="DEZOREX"></span>
+      <span class="logo__txt"><b>DEZOREX</b><span>САНИТАРНАЯ СЛУЖБА</span></span></span>
+        </a>
+        <p>Санитарная служба в Москве. Дезинсекция, дезинфекция, дератизация с гарантией по договору.</p>
+        <a href="tel:+79166928282" class="footer__phone">+7 916 692-82-82</a>
+        <a href="mailto:dezorex.2024@yandex.ru" class="footer__mail">dezorex.2024@yandex.ru</a>
+        <p>Пн–Пт 9:00–18:00, Сб выходной, Вс 9:00–18:00</p>
+        <p>Адрес: г. Москва, ул. Народного Ополчения, 22к1</p>
+        <button class="btn btn--ghost-light footer__btn" data-open-modal>Позвоните мне</button>
+        <div class="footer__soc">
+          <a href="https://wa.me/qr/LQVELE6DKAGUD1" target="_blank" rel="noopener noreferrer" class="soc" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-2.8.8.7-2.8-.2-.3A8 8 0 1112 20z"/></svg></a>
+          <a href="https://max.ru/id027421102123_bot" target="_blank" rel="noopener noreferrer" class="soc" aria-label="Max"><img src="img/icons/max-icon.png" alt="MAX" style="width:22px;height:22px;border-radius:6px;object-fit:cover"></a>
+          <a href="mailto:dezorex.2024@yandex.ru" class="soc" aria-label="Почта"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4>Услуги:</h4>
+        <a href="uslugi.html"># дезинсекция</a>
+        <a href="uslugi.html"># дезинфекция</a>
+        <a href="uslugi.html"># дератизация</a>
+        <a href="uslugi.html"># дезодорация</a>
+        <a href="uslugi.html"># обработка участка</a>
+      </div>
+
+      <div class="footer__col">
+        <h4>Каталог:</h4>
+        <a href="katalog.html"># тараканы</a>
+        <a href="katalog.html"># клопы</a>
+        <a href="katalog.html"># муравьи</a>
+        <a href="katalog.html"># грызуны</a>
+        <a href="katalog.html"># плесень</a>
+      </div>
+
+      <div class="footer__col">
+        <h4>Компания:</h4>
+        <a href="o-nas.html"># о нас</a>
+        <a href="podgotovka.html"># подготовка к обработке</a>
+        <a href="licenziya.html"># лицензия</a>
+        <a href="otzyvy.html"># отзывы</a>
+        <a href="yur-licam.html"># юр. лицам</a>
+        <a href="oferta.html"># оферта</a>
+        <a href="soglasie.html"># согласие на обработку ПДн</a>
+        <a href="algoritm-licenzii.html"># лицензия ДДД: алгоритм</a>
+        <a href="kontakty.html"># контакты</a>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      © 2026 — DEZOREX — санитарные услуги СЭС в Москве. Работаем по лицензии.<br>
+      Лицензия ЕРУЛ № Л064-00111-77/05038593. ИП Мамедов Тамерлан Ровшан оглы, ОГРН 324028000053616.<br>
+      <span style="display:inline-block;margin-top:10px;font-size:13px;opacity:.85">
+        <a href="politika.html" style="color:inherit">Политика конфиденциальности</a> ·
+        <a href="soglasie.html" style="color:inherit">Согласие на обработку ПДн</a> ·
+        <a href="oferta.html" style="color:inherit">Публичная оферта</a> ·
+        <a href="algoritm-licenzii.html" style="color:inherit">Лицензия ДДД: алгоритм</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== ПЛАВАЮЩИЕ КНОПКИ ===== -->
+<div class="float-btns">
+  <a href="https://wa.me/qr/LQVELE6DKAGUD1" target="_blank" rel="noopener noreferrer" class="fb-wa" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-2.8.8.7-2.8-.2-.3A8 8 0 1112 20z"/></svg></a>
+  <a href="https://max.ru/id027421102123_bot" target="_blank" rel="noopener noreferrer" class="fb-tg" aria-label="Max"><img src="img/icons/max-icon.png" alt="MAX" style="width:26px;height:26px;border-radius:7px;object-fit:cover"></a>
+</div>
+
+<!-- ===== МОДАЛКА ===== -->
+<div class="modal" id="modal">
+  <div class="modal__overlay" data-close-modal></div>
+  <div class="modal__box" role="dialog" aria-modal="true">
+    <button class="modal__close" data-close-modal aria-label="Закрыть">&times;</button>
+    <h3>Вызвать СЭС</h3>
+    <p>Перезвоним в течение 5 минут и назовём точную цену обработки.</p>
+    <form data-form data-success="Заявка принята! Перезвоним в течение 5 минут">
+          <div style="position:absolute;left:-9999px;top:-9999px;opacity:0;height:0;overflow:hidden" aria-hidden="true"><label>Не заполняйте это поле<input type="text" name="company_site" tabindex="-1" autocomplete="off"></label></div>
+      <label class="field"><span>Ваше имя</span><input type="text" name="name" placeholder="Как к вам обращаться" required></label>
+      <label class="field"><span>Телефон</span><input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required></label>
+      <label class="consent"><input type="checkbox" name="consent" checked> Я согласен с <a href="politika.html" target="_blank" rel="noopener noreferrer">политикой конфиденциальности</a> и <a href="soglasie.html" target="_blank" rel="noopener noreferrer">обработкой персональных данных</a></label>
+      <button type="submit" class="btn btn--yellow btn--block btn--lg">Жду звонка</button>
+    </form>
+  </div>
+</div>
+
+<!-- ===== МОДАЛКА ВЫБОРА ПОЧТЫ ===== -->
+<div class="mail-modal" id="mailModal">
+  <div class="mail-modal__overlay" data-mail-close></div>
+  <div class="mail-modal__box" role="dialog" aria-modal="true">
+    <button class="mail-modal__close" data-mail-close aria-label="Закрыть">&times;</button>
+    <h3>Написать нам</h3>
+    <p>Выберите почтовый сервис — откроется письмо на наш адрес:</p>
+    <span class="mail-modal__addr" id="mailAddr">dezorex.2024@yandex.ru</span>
+    <a class="mail-opt" id="mailGmail" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M22 5.5v13a1.5 1.5 0 01-1.5 1.5H19V8.2l-7 5.2-7-5.2V20H3.5A1.5 1.5 0 012 18.5v-13A1.5 1.5 0 013.5 4H4l8 6 8-6h.5A1.5 1.5 0 0122 5.5z" fill="#EA4335"/></svg>
+      Gmail <b>открыть →</b>
+    </a>
+    <a class="mail-opt" id="mailYandex" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="5" fill="#FC3F1D"/><path d="M13.2 6h-1.8c-1.9 0-3.3 1.2-3.3 3 0 1.4.7 2.2 2 3.1L7.8 18h1.9l2.1-3.6h.6V18h1.6V6h-.8zm-.2 6.9h-.6c-1 0-1.9-.5-1.9-1.9 0-1.3.8-1.8 1.7-1.8h.8v3.7z" fill="#fff"/></svg>
+      Яндекс.Почта <b>открыть →</b>
+    </a>
+    <a class="mail-opt" id="mailDefault">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#1c1c1c" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+      Почта на устройстве <b>открыть →</b>
+    </a>
+    <button class="mail-opt" id="mailCopy">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#1c1c1c" stroke-width="2"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 012-2h10"/></svg>
+      Скопировать адрес <b>копировать</b>
+    </button>
+    <div class="mail-copied" id="mailCopied"></div>
+  </div>
+</div>
+
+<!-- ===== КОРЗИНА ===== -->
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-drawer__overlay" data-cart-close></div>
+  <div class="cart-drawer__panel">
+    <div class="cart-drawer__head">
+      <h3>Корзина</h3>
+      <button class="cart-drawer__close" data-cart-close aria-label="Закрыть">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-foot" id="cartFoot" style="display:none">
+      <div class="cart-total"><span>Итого:</span><b id="cartTotal">0 ₽</b></div>
+      <button class="btn btn--yellow btn--block btn--lg" id="cartCheckout">Оформить заявку</button>
+      <p class="note" style="text-align:center;margin-top:10px">Заявка отправится нам — перезвоним и уточним детали</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== TOAST ===== -->
+<div class="toast" id="toast"></div>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

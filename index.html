@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DEZOREX — СЭС в Москве: дезинсекция, дезинфекция, дератизация">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://code.jivo.ru https://*.jivosite.com https://*.jivo.ru; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://yandex.ru https://*.jivosite.com https://*.jivo.ru; connect-src 'self' https://formsubmit.co https://*.jivosite.com https://*.jivo.ru wss://*.jivosite.com wss://*.jivo.ru; form-action 'self' https:; base-uri 'self'; object-src 'none'">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="index, follow">
+  <title>DEZOREX — СЭС в Москве: дезинсекция, дезинфекция, дератизация</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <!-- ============================================= -->
+  <!-- ЧАТ JIVOSITE                                    -->
+  <!-- Вставьте сюда ваш код из кабинета jivo.ru       -->
+  <!-- (замените строку ниже на код, который выдал Jivo)-->
+  <!-- Пример: <script src="//code.jivo.ru/widget/ВАШ_КОД"></script> -->
+  <!-- <script src="//code.jivo.ru/widget/ВАШ_КОД"></script> -->
+  <!-- ============================================= -->
+</head>
+<body>
+<!-- ===== TOPBAR ===== -->
+<!-- ===== TOPBAR ===== -->
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a href="index.html" class="logo" aria-label="DEZOREX">
+      <span class="logo__img"><img src="img/logo-original.png" alt="DEZOREX"></span>
+      <span class="logo__txt"><b>DEZOREX</b><span>САНИТАРНАЯ СЛУЖБА</span></span></span>
+    </a>
+
+    <div class="topbar__contacts">
+      <a href="tel:+79166928282">+7 916 692-82-82</a>
+      <a href="mailto:dezorex.2024@yandex.ru" class="muted">dezorex.2024@yandex.ru</a>
+    </div>
+    <div class="topbar__schedule">
+      <b>СЭС Москвы</b>
+      Пн–Вс 9–18
+    </div>
+
+    <div class="topbar__cta">
+      <button class="btn btn--yellow" data-open-modal>Узнать цену</button>
+      <button class="btn btn--yellow" data-open-modal>Позвоните мне</button>
+    </div>
+
+    <div class="topbar__social">
+      <a href="https://wa.me/qr/LQVELE6DKAGUD1" target="_blank" rel="noopener noreferrer" class="soc" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-2.8.8.7-2.8-.2-.3A8 8 0 1112 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.7.9-.1.1-.3.2-.5.1-1.4-.7-2.3-1.2-3.2-2.7-.2-.4.2-.4.6-1.2 0-.1 0-.3 0-.4 0-.1-.5-1.3-.7-1.7-.2-.5-.4-.4-.5-.4h-.5c-.1 0-.4.1-.6.3-.2.2-.8.8-.8 1.9 0 1.2.8 2.3.9 2.4.1.1 1.7 2.7 4.2 3.7 1.6.7 2.2.7 3 .6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1z"/></svg></a>
+      <a href="https://max.ru/id027421102123_bot" target="_blank" rel="noopener noreferrer" class="soc" aria-label="Max"><img src="img/icons/max-icon.png" alt="MAX" style="width:22px;height:22px;border-radius:6px;object-fit:cover"></a>
+      <a href="mailto:dezorex.2024@yandex.ru" class="soc" aria-label="Почта"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+    </div>
+    <button class="cart-btn" id="cartBtn" aria-label="Корзина" title="Корзина">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+      <span class="cart-btn__count" id="cartCount">0</span>
+    </button>
+    <div class="topbar__city">Москва ↓</div>
+
+    <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ===== MAIN NAV ===== -->
+<nav class="mainnav">
+  <div class="container mainnav__inner">
+    <a href="index.html" class="mainnav__home" aria-label="Главная">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
+    </a>
+    <ul class="menu" id="menu">
+      <li class="menu__item">
+        <a href="uslugi.html" class="menu__link" data-nav="uslugi">Услуги <svg class="caret" viewBox="0 0 12 12" fill="currentColor"><path d="M6 8 1 3h10z"/></svg></a>
+        <div class="menu__drop">
+          <a href="uslugi.html"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg> Дезинсекция</a>
+          <a href="uslugi.html"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg> Дезинфекция</a>
+          <a href="uslugi.html"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg> Дератизация</a>
+          <a href="uslugi.html"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg> Дезодорация</a>
+          <a href="uslugi.html"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg> Обработка участка</a>
+        </div>
+      </li>
+      <li class="menu__item">
+        <a href="katalog.html" class="menu__link" data-nav="katalog">Каталог <svg class="caret" viewBox="0 0 12 12" fill="currentColor"><path d="M6 8 1 3h10z"/></svg></a>
+        <div class="menu__drop">
+          <a href="katalog.html"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg> Вредители</a>
+          <a href="preparaty.html"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg> Препараты</a>
+        </div>
+      </li>
+      <li class="menu__item"><a href="tseny.html" class="menu__link" data-nav="tseny">Цены</a></li>
+      <li class="menu__item"><a href="yur-licam.html" class="menu__link" data-nav="yur">Юр. лицам</a></li>
+      <li class="menu__item"><a href="o-nas.html" class="menu__link" data-nav="onas">О нас</a></li>
+      <li class="menu__item"><a href="licenziya.html" class="menu__link" data-nav="licenziya">Лицензия</a></li>
+      <li class="menu__item"><a href="otzyvy.html" class="menu__link" data-nav="otzyvy">Отзывы</a></li>
+      <li class="menu__item"><a href="kontakty.html" class="menu__link" data-nav="kontakty">Контакты</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero__inner">
+    <div class="reveal">
+      <span style="display:inline-block;background:rgba(0,0,0,.08);padding:8px 16px;border-radius:999px;font-weight:700;font-size:13px;margin-bottom:18px">Работаем по лицензии · Выезд сегодня</span>
+      <h1 class="h-display">Санитарная служба <span class="mark">DEZOREX</span> в Москве</h1>
+      <p>Уничтожение насекомых, грызунов, плесени и запахов с гарантией по договору. Сертифицированные средства, безопасные для детей и животных. Выезд мастера уже сегодня.</p>
+      <div class="hero__btns">
+        <button class="btn btn--dark btn--lg" data-open-modal>Вызвать специалиста</button>
+        <a href="katalog.html" class="btn btn--ghost btn--lg">Каталог вредителей</a>
+      </div>
+      <div class="hero__tags">
+        <span>#тараканы</span><span>#клопы</span><span>#грызуны</span><span>#плесень</span><span>#запахи</span>
+      </div>
+    </div>
+    <div class="hero__form reveal form-dark">
+      <h3>Узнать цену</h3>
+      <p class="sub">Перезвоним через 2 минуты и назовём окончательную цену</p>
+      <form data-form data-success="Спасибо! Перезвоним через 2 минуты">
+          <div style="position:absolute;left:-9999px;top:-9999px;opacity:0;height:0;overflow:hidden" aria-hidden="true"><label>Не заполняйте это поле<input type="text" name="company_site" tabindex="-1" autocomplete="off"></label></div>
+        <label class="field"><span>Что беспокоит?</span>
+          <input type="text" name="problem" placeholder="Например: тараканы, клопы, запах…">
+        </label>
+        <label class="field"><span>Телефон</span><input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required></label>
+        <label class="consent"><input type="checkbox" name="consent" checked> Я согласен с <a href="politika.html" target="_blank" rel="noopener noreferrer">политикой конфиденциальности</a> и <a href="soglasie.html" target="_blank" rel="noopener noreferrer">обработкой персональных данных</a></label>
+          <button type="submit" class="btn btn--yellow btn--block btn--lg">Получить расчёт</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ПЛИТКИ УСЛУГ -->
+<div class="container">
+  <div class="svc-tabs">
+    <a href="uslugi.html" class="svc-tab reveal"><span class="svc-tab__ico"><svg viewBox="0 0 24 24" fill="#1c1c1c"><ellipse cx="12" cy="13" rx="6" ry="8"/><path d="M12 5V2M8 4l2 2M16 4l-2 2" stroke="#1c1c1c" stroke-width="2"/></svg></span><b>Дезинсекция</b><span>от насекомых</span></a>
+    <a href="uslugi.html" class="svc-tab reveal"><span class="svc-tab__ico"><svg viewBox="0 0 24 24" fill="#1c1c1c"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2.5" fill="#FFC700"/></svg></span><b>Дезинфекция</b><span>от вирусов и плесени</span></a>
+    <a href="uslugi.html" class="svc-tab reveal"><span class="svc-tab__ico"><svg viewBox="0 0 24 24" fill="#1c1c1c"><ellipse cx="10" cy="14" rx="6" ry="4"/><circle cx="16" cy="9" r="3"/></svg></span><b>Дератизация</b><span>от грызунов</span></a>
+    <a href="uslugi.html" class="svc-tab reveal"><span class="svc-tab__ico"><svg viewBox="0 0 24 24" fill="none" stroke="#1c1c1c" stroke-width="2"><path d="M5 12c3-4 11-4 14 0M7 16c2-2 8-2 10 0"/></svg></span><b>Дезодорация</b><span>устранение запахов</span></a>
+    <a href="uslugi.html" class="svc-tab reveal"><span class="svc-tab__ico"><svg viewBox="0 0 24 24" fill="#1c1c1c"><circle cx="12" cy="9" r="6"/><rect x="11" y="14" width="2" height="7"/></svg></span><b>Обработка участка</b><span>от клещей и комаров</span></a>
+  </div>
+</div>
+
+<!-- ЛИЦЕНЗИЯ-БАННЕР -->
+<section class="section" style="padding:40px 0">
+  <div class="container">
+    <div class="reveal" style="background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius-lg);padding:30px 34px;display:flex;align-items:center;gap:24px;flex-wrap:wrap;justify-content:space-between">
+      <div style="display:flex;align-items:center;gap:18px">
+        <span style="width:56px;height:56px;flex-shrink:0;background:var(--yellow);border-radius:14px;display:grid;place-items:center">
+          <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="#1c1c1c" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg>
+        </span>
+        <div>
+          <b style="font-family:var(--display);text-transform:uppercase;font-size:18px">Работаем по лицензии</b>
+          <p style="color:var(--gray);font-size:14px;margin-top:2px">ЕРУЛ № Л064-00111-77/05038593 — статус «Действует»</p>
+        </div>
+      </div>
+      <a href="licenziya.html" class="btn btn--dark">Проверить лицензию</a>
+    </div>
+  </div>
+</section>
+
+<!-- БЛОК ВЫЗОВА -->
+<section class="section call3">
+  <div class="container">
+    <h2 class="call3__title h-display reveal">Вызвать СЭС сейчас и получить <span class="mark">скидку 10%</span> на первый заказ</h2>
+    <div class="call3__grid">
+      <div class="call3__col call3__col--form reveal form-dark">
+        <h3>Вы оставляете заявку здесь</h3>
+        <form data-form data-success="Заявка принята! Вызываем специалиста">
+          <div style="position:absolute;left:-9999px;top:-9999px;opacity:0;height:0;overflow:hidden" aria-hidden="true"><label>Не заполняйте это поле<input type="text" name="company_site" tabindex="-1" autocomplete="off"></label></div>
+          <label class="field"><input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required></label>
+          <label class="call3__radio"><input type="radio" name="when" checked> Прямо сейчас!</label>
+          <label class="call3__radio"><input type="radio" name="when"> Чуть позже</label>
+          <label class="consent"><input type="checkbox" name="consent" checked> Я согласен с <a href="politika.html" target="_blank" rel="noopener noreferrer">политикой конфиденциальности</a> и <a href="soglasie.html" target="_blank" rel="noopener noreferrer">обработкой персональных данных</a></label>
+          <button type="submit" class="btn btn--yellow btn--block btn--lg">Вызвать специалиста</button>
+        </form>
+      </div>
+      <div class="call3__col call3__col--mid reveal">
+        <h3>Уточняем всё по звонку</h3>
+        <ul class="call3__list">
+          <li>Вы описываете свою проблему по телефону</li>
+          <li>Подбираем способ обработки и средства</li>
+          <li>Согласовываем дату и время, принимаем срочные заявки</li>
+          <li>Бригада выезжает на объект и устраняет проблему</li>
+          <li>Даём рекомендации по профилактике</li>
+        </ul>
+      </div>
+      <div class="call3__col call3__col--res reveal">
+        <h3>100% результат и гарантии</h3>
+        <ul class="call3__list">
+          <li>По завершении мастер проверяет эффективность</li>
+          <li>Работаем по договору с гарантией</li>
+          <li>Сертифицированные препараты, безопасные для семьи</li>
+          <li>Приедем снова, если не помогло</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- СКИДКА 20% ЛЬГОТНЫМ КАТЕГОРИЯМ -->
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="discount reveal">
+      <div class="discount__badge">
+        <b>20%</b>
+      </div>
+      <div class="discount__body">
+        <h2>Скидка 20% льготным категориям</h2>
+        <ul class="discount__list">
+          <li>Многодетным семьям</li>
+          <li>Пенсионерам</li>
+          <li>Ветеранам боевых действий</li>
+          <li>Участникам СВО</li>
+        </ul>
+        <p class="discount__note">Скидка предоставляется при наличии подтверждающих документов. Сообщите менеджеру при оформлении заявки.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ГЕОГРАФИЯ РАБОТЫ -->
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="geo reveal">
+      <div class="geo__top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 21s-7-5.6-7-11a7 7 0 0114 0c0 5.4-7 11-7 11z"/></svg>
+        <h2>География работы</h2>
+      </div>
+      <div class="geo__grid">
+        <div class="geo__card"><b>Москва</b><p>Все районы и округа столицы. Выезд мастера в день обращения.</p></div>
+        <div class="geo__card"><b>Московская область</b><p>Работаем по всем городам Подмосковья — от ближнего до дальнего.</p></div>
+        <div class="geo__card"><b>Другие регионы России</b><p>Выезжаем по всей стране — от Санкт-Петербурга до Владивостока. Условия уточняйте у менеджера.</p></div>
+      </div>
+      <div class="geo__cities">
+        <h3 class="geo__cities-title">Города, в которые мы выезжаем</h3>
+        <ul class="geo__cities-list">
+          <li>Москва</li><li>Санкт-Петербург</li><li>Новосибирск</li><li>Екатеринбург</li><li>Казань</li><li>Нижний Новгород</li><li>Челябинск</li><li>Самара</li><li>Уфа (Башкортостан)</li><li>Ростов-на-Дону</li><li>Краснодар</li><li>Омск</li><li>Воронеж</li><li>Пермь</li><li>Волгоград</li><li>Саратов</li><li>Тюмень</li><li>Тольятти</li><li>Ижевск</li><li>Барнаул</li><li>Ульяновск</li><li>Иркутск</li><li>Хабаровск</li><li>Ярославль</li><li>Владивосток</li><li>Махачкала</li><li>Томск</li><li>Оренбург</li><li>Кемерово</li><li>Новокузнецк</li><li>Рязань</li><li>Астрахань</li><li>Набережные Челны</li><li>Пенза</li><li>Липецк</li><li>Киров</li><li>Чебоксары</li><li>Тула</li><li>Калининград</li><li>Курск</li><li>Ставрополь</li><li>Улан-Удэ</li><li>Тверь</li><li>Магнитогорск</li><li>Сочи</li><li>Иваново</li><li>Брянск</li><li>Белгород</li><li>Сургут</li><li>Владимир</li><li>Чита</li><li>Архангельск</li><li>Калуга</li><li>Смоленск</li><li>Волжский</li><li>Якутск</li><li>Саранск</li><li>Череповец</li><li>Вологда</li><li>Курган</li><li>Орёл</li><li>Владикавказ</li><li>Подольск</li><li>Грозный</li><li>Мурманск</li><li>Тамбов</li><li>Стерлитамак</li><li>Нижневартовск</li><li>Кострома</li><li>Новороссийск</li><li>Йошкар-Ола</li><li>Нижний Тагил</li><li>Красноярск</li><li>Симферополь</li><li>Севастополь</li><li>Нальчик</li><li>Балашиха</li><li>Химки</li><li>Королёв</li><li>Люберцы</li><li>Мытищи</li><li>Крупные города Московской области</li>
+        </ul>
+        <p class="geo__cities-note">Вашего города нет в списке? Всё равно свяжитесь с нами — мы работаем по всей России и подберём удобный вариант выезда.</p>
+      </div>
+      <p class="geo__note"><b>Работаем по всей Московской области и в других городах России.</b> Оставьте заявку — уточним возможность и сроки выезда в ваш город.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- НАШИ ПАРТНЁРЫ -->
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="partners reveal">
+      <h2>Наши партнёры</h2>
+      <p class="partners__sub">Нам доверяют и с нами работают</p>
+      <div class="partners__grid">
+        <div class="partner"><img src="img/partners/sberbank.png" alt="СберБанк" loading="lazy"></div>
+        <div class="partner"><img src="img/partners/t-bank.png" alt="Т-Банк" loading="lazy"></div>
+        <div class="partner"><img src="img/partners/tochka-bank.png" alt="Банк Точка" loading="lazy"></div>
+        <div class="partner"><img src="img/partners/vtb.png" alt="ВТБ" loading="lazy"></div>
+        <div class="partner"><img src="img/partners/alfa-bank.png" alt="Альфа-Банк" loading="lazy"></div>
+        <div class="partner"><img src="img/partners/chestny-znak.png" alt="Честный знак" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__cta">
+      <a href="uslugi.html">Дезинсекция</a>
+      <a href="uslugi.html">Дезинфекция</a>
+      <a href="uslugi.html">Дератизация</a>
+      <a href="uslugi.html">Дезодорация</a>
+      <a href="katalog.html">Каталог вредителей</a>
+      <a href="licenziya.html">Лицензия</a>
+    </div>
+
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="logo">
+          <span class="logo__img"><img src="img/logo-original.png" alt="DEZOREX"></span>
+      <span class="logo__txt"><b>DEZOREX</b><span>САНИТАРНАЯ СЛУЖБА</span></span></span>
+        </a>
+        <p>Санитарная служба в Москве. Дезинсекция, дезинфекция, дератизация с гарантией по договору.</p>
+        <a href="tel:+79166928282" class="footer__phone">+7 916 692-82-82</a>
+        <a href="mailto:dezorex.2024@yandex.ru" class="footer__mail">dezorex.2024@yandex.ru</a>
+        <p>Пн–Пт 9:00–18:00, Сб выходной, Вс 9:00–18:00</p>
+        <p>Адрес: г. Москва, ул. Народного Ополчения, 22к1</p>
+        <button class="btn btn--ghost-light footer__btn" data-open-modal>Позвоните мне</button>
+        <div class="footer__soc">
+          <a href="https://wa.me/qr/LQVELE6DKAGUD1" target="_blank" rel="noopener noreferrer" class="soc" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-2.8.8.7-2.8-.2-.3A8 8 0 1112 20z"/></svg></a>
+          <a href="https://max.ru/id027421102123_bot" target="_blank" rel="noopener noreferrer" class="soc" aria-label="Max"><img src="img/icons/max-icon.png" alt="MAX" style="width:22px;height:22px;border-radius:6px;object-fit:cover"></a>
+          <a href="mailto:dezorex.2024@yandex.ru" class="soc" aria-label="Почта"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4>Услуги:</h4>
+        <a href="uslugi.html"># дезинсекция</a>
+        <a href="uslugi.html"># дезинфекция</a>
+        <a href="uslugi.html"># дератизация</a>
+        <a href="uslugi.html"># дезодорация</a>
+        <a href="uslugi.html"># обработка участка</a>
+      </div>
+
+      <div class="footer__col">
+        <h4>Каталог:</h4>
+        <a href="katalog.html"># тараканы</a>
+        <a href="katalog.html"># клопы</a>
+        <a href="katalog.html"># муравьи</a>
+        <a href="katalog.html"># грызуны</a>
+        <a href="katalog.html"># плесень</a>
+      </div>
+
+      <div class="footer__col">
+        <h4>Компания:</h4>
+        <a href="o-nas.html"># о нас</a>
+        <a href="podgotovka.html"># подготовка к обработке</a>
+        <a href="licenziya.html"># лицензия</a>
+        <a href="otzyvy.html"># отзывы</a>
+        <a href="yur-licam.html"># юр. лицам</a>
+        <a href="oferta.html"># оферта</a>
+        <a href="soglasie.html"># согласие на обработку ПДн</a>
+        <a href="algoritm-licenzii.html"># лицензия ДДД: алгоритм</a>
+        <a href="kontakty.html"># контакты</a>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      © 2026 — DEZOREX — санитарные услуги СЭС в Москве. Работаем по лицензии.<br>
+      Лицензия ЕРУЛ № Л064-00111-77/05038593. ИП Мамедов Тамерлан Ровшан оглы, ОГРН 324028000053616.<br>
+      <span style="display:inline-block;margin-top:10px;font-size:13px;opacity:.85">
+        <a href="politika.html" style="color:inherit">Политика конфиденциальности</a> ·
+        <a href="soglasie.html" style="color:inherit">Согласие на обработку ПДн</a> ·
+        <a href="oferta.html" style="color:inherit">Публичная оферта</a> ·
+        <a href="algoritm-licenzii.html" style="color:inherit">Лицензия ДДД: алгоритм</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== ПЛАВАЮЩИЕ КНОПКИ ===== -->
+<div class="float-btns">
+  <a href="https://wa.me/qr/LQVELE6DKAGUD1" target="_blank" rel="noopener noreferrer" class="fb-wa" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-2.8.8.7-2.8-.2-.3A8 8 0 1112 20z"/></svg></a>
+  <a href="https://max.ru/id027421102123_bot" target="_blank" rel="noopener noreferrer" class="fb-tg" aria-label="Max"><img src="img/icons/max-icon.png" alt="MAX" style="width:26px;height:26px;border-radius:7px;object-fit:cover"></a>
+</div>
+
+<!-- ===== МОДАЛКА ===== -->
+<div class="modal" id="modal">
+  <div class="modal__overlay" data-close-modal></div>
+  <div class="modal__box" role="dialog" aria-modal="true">
+    <button class="modal__close" data-close-modal aria-label="Закрыть">&times;</button>
+    <h3>Вызвать СЭС</h3>
+    <p>Перезвоним в течение 5 минут и назовём точную цену обработки.</p>
+    <form data-form data-success="Заявка принята! Перезвоним в течение 5 минут">
+          <div style="position:absolute;left:-9999px;top:-9999px;opacity:0;height:0;overflow:hidden" aria-hidden="true"><label>Не заполняйте это поле<input type="text" name="company_site" tabindex="-1" autocomplete="off"></label></div>
+      <label class="field"><span>Ваше имя</span><input type="text" name="name" placeholder="Как к вам обращаться" required></label>
+      <label class="field"><span>Телефон</span><input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required></label>
+      <label class="consent"><input type="checkbox" name="consent" checked> Я согласен с <a href="politika.html" target="_blank" rel="noopener noreferrer">политикой конфиденциальности</a> и <a href="soglasie.html" target="_blank" rel="noopener noreferrer">обработкой персональных данных</a></label>
+      <button type="submit" class="btn btn--yellow btn--block btn--lg">Жду звонка</button>
+    </form>
+  </div>
+</div>
+
+<!-- ===== МОДАЛКА ВЫБОРА ПОЧТЫ ===== -->
+<div class="mail-modal" id="mailModal">
+  <div class="mail-modal__overlay" data-mail-close></div>
+  <div class="mail-modal__box" role="dialog" aria-modal="true">
+    <button class="mail-modal__close" data-mail-close aria-label="Закрыть">&times;</button>
+    <h3>Написать нам</h3>
+    <p>Выберите почтовый сервис — откроется письмо на наш адрес:</p>
+    <span class="mail-modal__addr" id="mailAddr">dezorex.2024@yandex.ru</span>
+    <a class="mail-opt" id="mailGmail" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M22 5.5v13a1.5 1.5 0 01-1.5 1.5H19V8.2l-7 5.2-7-5.2V20H3.5A1.5 1.5 0 012 18.5v-13A1.5 1.5 0 013.5 4H4l8 6 8-6h.5A1.5 1.5 0 0122 5.5z" fill="#EA4335"/></svg>
+      Gmail <b>открыть →</b>
+    </a>
+    <a class="mail-opt" id="mailYandex" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="5" fill="#FC3F1D"/><path d="M13.2 6h-1.8c-1.9 0-3.3 1.2-3.3 3 0 1.4.7 2.2 2 3.1L7.8 18h1.9l2.1-3.6h.6V18h1.6V6h-.8zm-.2 6.9h-.6c-1 0-1.9-.5-1.9-1.9 0-1.3.8-1.8 1.7-1.8h.8v3.7z" fill="#fff"/></svg>
+      Яндекс.Почта <b>открыть →</b>
+    </a>
+    <a class="mail-opt" id="mailDefault">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#1c1c1c" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+      Почта на устройстве <b>открыть →</b>
+    </a>
+    <button class="mail-opt" id="mailCopy">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#1c1c1c" stroke-width="2"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 012-2h10"/></svg>
+      Скопировать адрес <b>копировать</b>
+    </button>
+    <div class="mail-copied" id="mailCopied"></div>
+  </div>
+</div>
+
+<!-- ===== КОРЗИНА ===== -->
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-drawer__overlay" data-cart-close></div>
+  <div class="cart-drawer__panel">
+    <div class="cart-drawer__head">
+      <h3>Корзина</h3>
+      <button class="cart-drawer__close" data-cart-close aria-label="Закрыть">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-foot" id="cartFoot" style="display:none">
+      <div class="cart-total"><span>Итого:</span><b id="cartTotal">0 ₽</b></div>
+      <button class="btn btn--yellow btn--block btn--lg" id="cartCheckout">Оформить заявку</button>
+      <p class="note" style="text-align:center;margin-top:10px">Заявка отправится нам — перезвоним и уточним детали</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== TOAST ===== -->
+<div class="toast" id="toast"></div>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

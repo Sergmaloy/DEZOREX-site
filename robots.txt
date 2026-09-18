@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /docs/
+
+# После публикации замените домен на свой:
+Sitemap: https://ВАШ-ДОМЕН.ru/sitemap.xml

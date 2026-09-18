@@ -1,0 +1,171 @@
+# ============================================================
+#  DEZOREX — .htaccess
+#  Защита сайта, HTTPS, заголовки безопасности, кэш, сжатие
+#  Работает на Apache-хостингах (reg.ru, Beget, Timeweb и др.)
+# ============================================================
+
+# ------------------------------------------------------------
+# 1. Кодировка по умолчанию
+# ------------------------------------------------------------
+AddDefaultCharset UTF-8
+
+# ------------------------------------------------------------
+# 2. Принудительный HTTPS (раскомментируйте ПОСЛЕ того,
+#    как на домене выпущен и работает SSL-сертификат)
+# ------------------------------------------------------------
+# <IfModule mod_rewrite.c>
+#   RewriteEngine On
+#   RewriteCond %{HTTPS} off
+#   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# </IfModule>
+
+# ------------------------------------------------------------
+# 3. Красивая главная страница
+# ------------------------------------------------------------
+DirectoryIndex index.html
+
+# ------------------------------------------------------------
+# 4. Заголовки безопасности
+# ------------------------------------------------------------
+<IfModule mod_headers.c>
+  # Запрет встраивания сайта в чужие iframe (защита от кликджекинга)
+  Header always set X-Frame-Options "SAMEORIGIN"
+
+  # Запрет угадывания MIME-типа браузером
+  Header always set X-Content-Type-Options "nosniff"
+
+  # Политика реферера
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # Ограничение доступа к камере/микрофону/геолокации
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+
+  # HSTS — включайте ТОЛЬКО когда HTTPS уже стабильно работает
+  # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+
+  # Content Security Policy — разрешает только нужные сайту источники:
+  # свои файлы, Google Fonts, Яндекс.Карты, форму FormSubmit, картинки Unsplash.
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://yandex.ru https://*.yandex.ru; connect-src 'self' https://formsubmit.co; form-action 'self' https://formsubmit.co; base-uri 'self'; object-src 'none'"
+
+  # Убираем лишнюю информацию о сервере из ответов
+  Header unset X-Powered-By
+  Header always unset X-Powered-By
+</IfModule>
+
+# ------------------------------------------------------------
+# 5. Запрет просмотра содержимого папок (листинга директорий)
+# ------------------------------------------------------------
+Options -Indexes
+
+# ------------------------------------------------------------
+# 6. Защита служебных и «чувствительных» файлов
+# ------------------------------------------------------------
+<FilesMatch "(^\.htaccess|\.htpasswd|\.ini|\.log|\.sh|\.bak|\.old|\.env|~)$">
+  Require all denied
+</FilesMatch>
+
+# Запрет доступа к файлам, начинающимся с точки (кроме .well-known для SSL)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule "(^|/)\.(?!well-known)" - [F]
+</IfModule>
+
+# ------------------------------------------------------------
+# 7. Отключаем подпись сервера в служебных страницах ошибок
+# ------------------------------------------------------------
+ServerSignature Off
+
+# ------------------------------------------------------------
+# 8. GZIP-сжатие (ускоряет загрузку сайта)
+# ------------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript
+  AddOutputFilterByType DEFLATE application/json image/svg+xml
+</IfModule>
+
+# ------------------------------------------------------------
+# 9. Кэширование статики в браузере
+# ------------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html               "access plus 1 hour"
+  ExpiresByType text/css                "access plus 1 month"
+  ExpiresByType application/javascript  "access plus 1 month"
+  ExpiresByType image/png               "access plus 1 year"
+  ExpiresByType image/jpeg              "access plus 1 year"
+  ExpiresByType image/webp              "access plus 1 year"
+  ExpiresByType image/svg+xml           "access plus 1 year"
+  ExpiresByType application/pdf         "access plus 1 month"
+  ExpiresByType font/woff2              "access plus 1 year"
+</IfModule>
+
+# ------------------------------------------------------------
+# 10. Красивые страницы ошибок (ведём пользователя на главную)
+# ------------------------------------------------------------
+ErrorDocument 404 /index.html
+
+# ------------------------------------------------------------
+# 11. Разрешаем только нужные HTTP-методы
+#     (блокируем TRACE, TRACK и прочую экзотику)
+# ------------------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{REQUEST_METHOD} !^(GET|HEAD|POST|OPTIONS)$
+  RewriteRule .* - [F]
+</IfModule>
+TraceEnable Off
+
+# ------------------------------------------------------------
+# 12. Защита от типовых атак через адресную строку
+#     (SQL-инъекции, XSS, попытки прочитать чужие файлы)
+# ------------------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Попытка выйти за пределы папки сайта (../../etc/passwd)
+  RewriteCond %{QUERY_STRING} (\.\./|\.\.%2f) [NC,OR]
+  # Внедрение тегов и скриптов в адрес
+  RewriteCond %{QUERY_STRING} (<|%3C)script(>|%3E) [NC,OR]
+  RewriteCond %{QUERY_STRING} (javascript:|vbscript:|onload=|onerror=) [NC,OR]
+  # Типовые SQL-инъекции
+  RewriteCond %{QUERY_STRING} (union(\s|%20)+select|concat\(|group_concat|information_schema) [NC,OR]
+  # Попытки подставить чужой адрес или PHP-обёртку
+  RewriteCond %{QUERY_STRING} (base64_encode|base64_decode|php://|data://) [NC]
+  RewriteRule .* - [F]
+
+  # Запрет обращения к типовым «сканируемым» путям чужих CMS
+  RewriteRule ^(wp-admin|wp-login\.php|xmlrpc\.php|administrator|phpmyadmin|\.git|\.env) - [F,L]
+</IfModule>
+
+# ------------------------------------------------------------
+# 13. Защита изображений от размещения на чужих сайтах
+#     (чужой сайт не сможет показывать ваши картинки со своего)
+#     ВНИМАНИЕ: после публикации замените ВАШ-ДОМЕН.ru на свой домен,
+#     иначе картинки могут не отображаться.
+# ------------------------------------------------------------
+# <IfModule mod_rewrite.c>
+#   RewriteEngine On
+#   RewriteCond %{HTTP_REFERER} !^$
+#   RewriteCond %{HTTP_REFERER} !^https?://(www\.)?ВАШ-ДОМЕН\.ru [NC]
+#   RewriteRule \.(jpg|jpeg|png|webp|gif|svg)$ - [F,NC,L]
+# </IfModule>
+
+# ------------------------------------------------------------
+# 14. Запрет запуска скриптов в папках с загрузками и картинками
+#     (даже если туда что-то попадёт, оно не выполнится)
+# ------------------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^(img|css|js|docs)/.*\.(php|phtml|php[0-9]|pl|py|cgi|sh|asp|aspx|exe)$ - [F,L]
+</IfModule>
+
+# ------------------------------------------------------------
+# 15. Защита от «пустых» и вредоносных User-Agent (простые боты)
+#     При проблемах с индексацией — закомментируйте этот блок.
+# ------------------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_USER_AGENT} (havij|sqlmap|nikto|nmap|acunetix|masscan|zgrab) [NC]
+  RewriteRule .* - [F]
+</IfModule>

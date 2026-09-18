@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://code.jivo.ru https://*.jivosite.com https://*.jivo.ru; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; base-uri 'self'; object-src 'none'">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="noindex, follow">
+  <title>Политика конфиденциальности — DEZOREX</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <!-- ============================================= -->
+  <!-- ЧАТ JIVOSITE                                    -->
+  <!-- Вставьте сюда ваш код из кабинета jivo.ru       -->
+  <!-- (замените строку ниже на код, который выдал Jivo)-->
+  <!-- Пример: <script src="//code.jivo.ru/widget/ВАШ_КОД"></script> -->
+  <!-- <script src="//code.jivo.ru/widget/ВАШ_КОД"></script> -->
+  <!-- ============================================= -->
+</head>
+<body>
+<nav class="mainnav">
+  <div class="container mainnav__inner">
+    <a href="index.html" class="mainnav__home" aria-label="Главная">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
+    </a>
+    <a href="index.html" class="menu__link">← На главную</a>
+  </div>
+</nav>
+<main>
+<section class="section" style="padding-top:30px">
+  <div class="container" style="max-width:860px">
+    <h1 class="h-display" style="font-size:clamp(1.6rem,4vw,2.4rem);margin-bottom:24px">Политика конфиденциальности</h1>
+    <div class="pay">
+      <p>Настоящая Политика составлена в соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных данных» и определяет порядок обработки персональных данных и меры по обеспечению их безопасности в санитарной службе «DEZOREX» (далее — Оператор).</p>
+
+      <h2 class="h-display">1. Какие данные мы собираем</h2>
+      <p>Оператор обрабатывает данные, которые вы добровольно указываете в формах на сайте:</p>
+      <ul class="pay-list"><li>Имя;</li><li>Номер телефона;</li><li>Адрес электронной почты (при наличии);</li><li>Комментарий к заявке (при наличии).</li></ul>
+
+      <h2 class="h-display">2. Цели обработки</h2>
+      <p>Данные используются для обратной связи, расчёта стоимости услуг, согласования и оказания услуг по дезинфекции, дезинсекции и дератизации, информирования о статусе заявки. Мы не передаём ваши данные третьим лицам, кроме случаев, предусмотренных законом.</p>
+
+      <h2 class="h-display">3. Правовые основания</h2>
+      <p>Обработка осуществляется на основании вашего согласия, которое вы даёте при отправке формы, а также на основании договора оказания услуг.</p>
+
+      <h2 class="h-display">4. Хранение и защита</h2>
+      <p>Оператор принимает необходимые правовые, организационные и технические меры для защиты данных от несанкционированного доступа, изменения и распространения.</p>
+
+      <h2 class="h-display">5. Ваши права</h2>
+      <p>Вы вправе запросить информацию об обработке ваших данных, потребовать их уточнения, блокирования или удаления, а также отозвать согласие, направив запрос на нашу почту.</p>
+
+      <h2 class="h-display">6. Контакты оператора</h2>
+      <p>ИП Мамедов Тамерлан Ровшан оглы<br>ОГРН: 324028000053616, ИНН: 027421102123<br>Лицензия ЕРУЛ № Л064-00111-77/05038593<br>E-mail: dezorex.2024@yandex.ru · Телефон: +7 916 692-82-82</p>
+
+      <p style="margin-top:20px;color:var(--gray-l);font-size:14px"><em>Это типовой шаблон. Перед публикацией проверьте и адаптируйте текст — желательно с юристом.</em></p>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="footer" style="padding-bottom:26px">
+  <div class="container"><div class="footer__bottom" style="margin-top:0;border-top:none">© 2026 — DEZOREX — санитарные услуги в Москве.</div></div>
+</footer>
+<!-- ===== МОДАЛКА ВЫБОРА ПОЧТЫ ===== -->
+<div class="mail-modal" id="mailModal">
+  <div class="mail-modal__overlay" data-mail-close></div>
+  <div class="mail-modal__box" role="dialog" aria-modal="true">
+    <button class="mail-modal__close" data-mail-close aria-label="Закрыть">&times;</button>
+    <h3>Написать нам</h3>
+    <p>Выберите почтовый сервис — откроется письмо на наш адрес:</p>
+    <span class="mail-modal__addr" id="mailAddr">dezorex.2024@yandex.ru</span>
+    <a class="mail-opt" id="mailGmail" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M22 5.5v13a1.5 1.5 0 01-1.5 1.5H19V8.2l-7 5.2-7-5.2V20H3.5A1.5 1.5 0 012 18.5v-13A1.5 1.5 0 013.5 4H4l8 6 8-6h.5A1.5 1.5 0 0122 5.5z" fill="#EA4335"/></svg>
+      Gmail <b>открыть →</b>
+    </a>
+    <a class="mail-opt" id="mailYandex" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="5" fill="#FC3F1D"/><path d="M13.2 6h-1.8c-1.9 0-3.3 1.2-3.3 3 0 1.4.7 2.2 2 3.1L7.8 18h1.9l2.1-3.6h.6V18h1.6V6h-.8zm-.2 6.9h-.6c-1 0-1.9-.5-1.9-1.9 0-1.3.8-1.8 1.7-1.8h.8v3.7z" fill="#fff"/></svg>
+      Яндекс.Почта <b>открыть →</b>
+    </a>
+    <a class="mail-opt" id="mailDefault">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#1c1c1c" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+      Почта на устройстве <b>открыть →</b>
+    </a>
+    <button class="mail-opt" id="mailCopy">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#1c1c1c" stroke-width="2"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 012-2h10"/></svg>
+      Скопировать адрес <b>копировать</b>
+    </button>
+    <div class="mail-copied" id="mailCopied"></div>
+  </div>
+</div>
+
+</body>
+</html>
