@@ -1,0 +1,18 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#FFF6D6"/>
+  <circle cx="200" cy="120" r="58" fill="#FFC700"/>
+  <g transform="translate(200,120)" stroke="#1c1c1c" stroke-width="6" fill="none" stroke-linecap="round">
+    <ellipse cx="0" cy="6" rx="26" ry="34" fill="#1c1c1c" stroke="none"/>
+    <ellipse cx="0" cy="-18" rx="14" ry="12" fill="#1c1c1c" stroke="none"/>
+    <line x1="-7" y1="-26" x2="-16" y2="-40"/>
+    <line x1="7" y1="-26" x2="16" y2="-40"/>
+    <line x1="-22" y1="-4" x2="-44" y2="-14"/>
+    <line x1="-24" y1="10" x2="-46" y2="12"/>
+    <line x1="-22" y1="24" x2="-42" y2="36"/>
+    <line x1="22" y1="-4" x2="44" y2="-14"/>
+    <line x1="24" y1="10" x2="46" y2="12"/>
+    <line x1="22" y1="24" x2="42" y2="36"/>
+  </g>
+  <text x="200" y="225" text-anchor="middle" fill="#1c1c1c" font-family="Arial, sans-serif" font-weight="700" font-size="26">МОЛЬ</text>
+  <text x="200" y="255" text-anchor="middle" fill="#9a8a3a" font-family="Arial, sans-serif" font-size="15">DEZOREX</text>
+</svg>
